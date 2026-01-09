@@ -278,13 +278,19 @@ img{ max-width:100%; display:block; }
 }
 
 .card .media{
-  height: 170px;
-  background:#111;
+  height: 170px;              /* keep same height */
+  background: #111;           /* already there, keep it */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;              /* adds space so image doesn't touch edges */
 }
+
 .card .media img{
-  width:100%;
-  height:100%;
-  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;        /* this makes the full image fit inside */
+  border-radius: 12px;        /* optional: looks cleaner */
 }
 
 .card .body{
@@ -425,3 +431,4 @@ img{ max-width:100%; display:block; }
   .hero-content h1{ font-size: 34px; }
   .gallery{ grid-template-columns: 1fr; }
 }
+
