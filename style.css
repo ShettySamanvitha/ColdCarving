@@ -51,17 +51,17 @@ img{ max-width:100%; display:block; }
 .brand{
   display:flex;
   align-items:center;
-  gap: 10px;
-  min-width: 220px;
+  gap: 14px;          /* more space between logo & text */
+  min-width: 260px;
 }
 
 .brand img{
-  width: 42px;
-  height: 42px;
+  width: 70px;            /* BIGGER */
+  height: 70px;           /* BIGGER */
   object-fit: contain;
-  border-radius: 10px;
-  background: rgba(255,255,255,0.06);
-  padding: 6px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.08);
+  padding: 8px;
   border: 1px solid var(--line);
 }
 
@@ -71,9 +71,10 @@ img{ max-width:100%; display:block; }
   line-height:1.1;
 }
 .brand .title strong{
-  letter-spacing:0.3px;
-  font-size: 16px;
+  letter-spacing:0.4px;
+  font-size: 18px;    /* balances big logo */
 }
+
 .brand .title span{
   color: var(--muted);
   font-size: 12px;
@@ -431,5 +432,6 @@ img{ max-width:100%; display:block; }
   .hero-content h1{ font-size: 34px; }
   .gallery{ grid-template-columns: 1fr; }
 }
+
 
 
