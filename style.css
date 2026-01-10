@@ -498,13 +498,13 @@ img{ max-width:100%; display:block; }
 }
 /* ===== BRANDING: BIGGER LOGO + TITLE ===== */
 .brand img{
-  width: 60px;          /* increase logo size */
+  width: 80px;          /* increase logo size */
   height: auto;
   object-fit: contain;
 }
 
 .brand .title strong{
-  font-size: 26px;        /* BIG title */
+  font-size: 46px;        /* BIG title */
   font-weight: 800;
   letter-spacing: 0.4px;
   color: #fff;
@@ -513,13 +513,13 @@ img{ max-width:100%; display:block; }
 
 
 .brand .title span{
-  font-size: 13px;
+  font-size: 20px;
   opacity: 0.75;
   letter-spacing: 0.3px;
 }
 
 .brand{
-  gap: 14px;              /* space between logo & text */
+  gap: 16px;              /* space between logo & text */
 }
 
 /* ===== SIDE PANEL IMAGE NOTE ===== */
@@ -534,6 +534,7 @@ img{ max-width:100%; display:block; }
   display: block;
   border-radius: 12px;
 }
+
 
 
 
