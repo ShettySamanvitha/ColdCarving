@@ -5,36 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Menu | Cold Carving</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    .menu-page{
-      padding: 110px 0 50px; /* leaves space for navbar */
-    }
-    .menu-wrap{
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 16px;
-      text-align: center;
-    }
-    .menu-img{
-      width: 100%;
-      height: auto;
-      border-radius: 18px;
-      border: 1px solid rgba(255,255,255,0.12);
-      background: rgba(255,255,255,0.03);
-    }
-    .menu-actions{
-      margin: 16px 0 18px;
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-  </style>
 </head>
+
 <body class="menu-view">
 
-
-  <!-- same NAV as index -->
+  <!-- NAV (same style as index) -->
   <header class="nav">
     <div class="container nav-inner">
       <a class="brand" href="index.html">
@@ -60,26 +35,35 @@
   </header>
 
   <main class="menu-page">
-  <div class="menu-fit">
-    <img src="assets/menu.jpeg" alt="Cold Carving Menu" />
-  </div>
+    <div class="menu-fit">
+      <img src="assets/menu.jpeg" alt="Cold Carving Menu" />
+    </div>
 
-  <div class="menu-actions">
-    <a class="btn" href="index.html">← Back to Home</a>
-    <a class="btn primary" href="assets/menu.jpeg" target="_blank">Download the Menu</a>
-  </div>
-</main>
-
+    <div class="menu-actions">
+      <a class="btn" href="index.html">← Back to Home</a>
+      <a class="btn primary" href="assets/menu.jpeg" target="_blank" rel="noopener">Download the Menu</a>
+    </div>
+  </main>
 
   <script>
-  const nav = document.querySelector('.nav');
-  if (nav) {
-    document.documentElement.style.setProperty(
-      '--real-nav-h',
-      nav.offsetHeight + 'px'
-    );
-  }
-</script>
+    // Measure sticky navbar height accurately (desktop + phone)
+    function setNavHeight(){
+      const nav = document.querySelector('.nav');
+      if (!nav) return;
+      document.documentElement.style.setProperty('--real-nav-h', nav.offsetHeight + 'px');
+    }
+
+    window.addEventListener('load', setNavHeight);
+    window.addEventListener('resize', setNavHeight);
+    setTimeout(setNavHeight, 50);
+
+    // Optional: mobile menu toggle if your script.js isn't loaded on this page
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+    if (menuBtn && navLinks){
+      menuBtn.addEventListener("click", () => navLinks.classList.toggle("open"));
+    }
+  </script>
 
 </body>
 </html>
