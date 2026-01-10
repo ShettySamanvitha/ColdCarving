@@ -461,3 +461,7 @@ img{ max-width:100%; display:block; }
 .product-image-card .body{
   width: fit-content;
 }
+/* ===== PRODUCT PAGE: reduce gap between image & info ===== */
+.product-split{
+  gap: 16px;   /* reduced gap (default was larger) */
+}
