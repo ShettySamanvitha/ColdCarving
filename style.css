@@ -495,5 +495,26 @@ img{ max-width:100%; display:block; }
   z-index: 2;
   padding: 32px;
 }
+/* ===== BRANDING: BIGGER LOGO + TITLE ===== */
+.brand img{
+  width: 56px;          /* increase logo size */
+  height: 56px;
+  object-fit: contain;
+}
+
+.brand .title strong{
+  font-size: 22px;      /* make "Cold Carving" big */
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.brand .title span{
+  font-size: 13px;      /* tagline smaller but visible */
+  opacity: 0.8;
+}
+.brand{
+  gap: 12px;
+}
+
 
 
