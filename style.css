@@ -139,7 +139,7 @@ img{ max-width:100%; display:block; }
 
 .hero-media{
   position:relative;
-  height: 340px;
+  min-height: 320px;
   background: #111;
 }
 .hero-media img{
@@ -535,6 +535,7 @@ img{ max-width:100%; display:block; }
   display: block;
   border-radius: 12px;
 }
+
 
 
 
