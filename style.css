@@ -158,11 +158,14 @@ img{ max-width:100%; display:block; }
 .hero-content{
   position:absolute;
   inset:0;
-  padding: 26px;
+  padding: 20px 24px;
   display:flex;
   flex-direction:column;
   justify-content:flex-end;
   gap: 10px;
+}
+.hero-content h1{
+  margin-bottom: 12px;
 }
 
 .badge{
@@ -535,6 +538,7 @@ img{ max-width:100%; display:block; }
   display: block;
   border-radius: 12px;
 }
+
 
 
 
