@@ -4,12 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Menu | Cold Carving</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=7" />
 </head>
 
 <body class="menu-view">
 
-  <!-- NAV (same style as index) -->
+  <!-- NAV -->
   <header class="nav">
     <div class="container nav-inner">
       <a class="brand" href="index.html">
@@ -34,6 +34,7 @@
     </div>
   </header>
 
+  <!-- MENU -->
   <main class="menu-page">
     <div class="menu-fit">
       <img src="assets/menu.jpeg" alt="Cold Carving Menu" />
@@ -45,25 +46,19 @@
     </div>
   </main>
 
+  <!-- Measure actual navbar height and store it in CSS var -->
   <script>
-    // Measure sticky navbar height accurately (desktop + phone)
-    function setNavHeight(){
-      const nav = document.querySelector('.nav');
-      if (!nav) return;
-      document.documentElement.style.setProperty('--real-nav-h', nav.offsetHeight + 'px');
-    }
-
-    window.addEventListener('load', setNavHeight);
-    window.addEventListener('resize', setNavHeight);
-    setTimeout(setNavHeight, 50);
-
-    // Optional: mobile menu toggle if your script.js isn't loaded on this page
-    const menuBtn = document.getElementById("menuBtn");
-    const navLinks = document.getElementById("navLinks");
-    if (menuBtn && navLinks){
-      menuBtn.addEventListener("click", () => navLinks.classList.toggle("open"));
-    }
+    (function () {
+      const nav = document.querySelector(".nav");
+      const setNavH = () => {
+        if (!nav) return;
+        document.documentElement.style.setProperty("--real-nav-h", nav.offsetHeight + "px");
+      };
+      setNavH();
+      window.addEventListener("resize", setNavH);
+    })();
   </script>
 
+  <script src="script.js"></script>
 </body>
 </html>
