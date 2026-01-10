@@ -606,7 +606,51 @@ img{ max-width:100%; display:block; }
     grid-template-columns: 1fr;
   }
 }
+/* ===== MENU FULL SCREEN FIT ===== */
+.menu-page{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 80px; /* space for buttons */
+}
 
+.menu-fit{
+  max-width: 100%;
+  max-height: calc(100vh - 110px); /* leaves space for buttons */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-fit img{
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain; /* KEY LINE */
+  border-radius: 16px;
+}
+
+/* Fixed bottom buttons */
+.menu-actions{
+  position: fixed;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+  padding: 10px 14px;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  z-index: 999;
+}
+
+.menu-actions .btn{
+  white-space: nowrap;
+}
 
 
 
