@@ -71,6 +71,15 @@
 </main>
 
 
-  <script src="script.js"></script>
+  <script>
+  const nav = document.querySelector('.nav');
+  if (nav) {
+    document.documentElement.style.setProperty(
+      '--real-nav-h',
+      nav.offsetHeight + 'px'
+    );
+  }
+</script>
+
 </body>
 </html>
