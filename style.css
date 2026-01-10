@@ -626,7 +626,6 @@ img{ max-width:100%; display:block; }
 
 .menu-fit{
   max-width: 100%;
-  max-height: calc(100vh - var(--nav-h) - 110px); /* navbar + buttons space */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -662,18 +661,24 @@ img{ max-width:100%; display:block; }
 .menu-actions .btn{
   white-space: nowrap;
 }
-/* ===== MENU PAGE: prevent nav overlapping menu image ===== */
+/* ===== MENU PAGE: TRUE NAV OFFSET FIX ===== */
+.menu-view .nav{
+  position: sticky;
+}
+
 .menu-view .menu-page{
-  padding-top: calc(var(--nav-h) + 16px);
-  height: auto;          /* override the 100vh center behavior */
+  padding-top: calc(1rem + var(--real-nav-h, 140px));
+  height: auto;
   min-height: 100vh;
   align-items: flex-start;
 }
 
-/* Make the menu image fit within visible screen BELOW the nav */
+/* Make image fit fully below navbar */
 .menu-view .menu-fit{
-  max-height: calc(100vh - var(--nav-h) - 24px);
+  max-height: calc(100vh - var(--real-nav-h, 140px) - 24px);
 }
+
+
 
 
 
