@@ -436,7 +436,7 @@ img{ max-width:100%; display:block; }
   height: auto !important;
   padding: 0 !important;
   background: transparent;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
 }
 
@@ -448,18 +448,16 @@ img{ max-width:100%; display:block; }
   display: block;
 }
 
+/* Make the image card hug the image width */
+.product-image-card{
+  width: fit-content;
+  max-width: 100%;
+}
 
+.product-image-card .media{
+  width: fit-content;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+.product-image-card .body{
+  width: fit-content;
+}
