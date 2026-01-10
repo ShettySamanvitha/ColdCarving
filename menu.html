@@ -4,13 +4,36 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Menu | Cold Carving</title>
-
-  <!-- cache-bust to force github pages to load latest css -->
-  <link rel="stylesheet" href="style.css?v=21" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .menu-page{
+      padding: 110px 0 50px; /* leaves space for navbar */
+    }
+    .menu-wrap{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 16px;
+      text-align: center;
+    }
+    .menu-img{
+      width: 100%;
+      height: auto;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.03);
+    }
+    .menu-actions{
+      margin: 16px 0 18px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+  </style>
 </head>
+<body>
 
-<body class="menu-view">
-  <!-- NAV -->
+  <!-- same NAV as index -->
   <header class="nav">
     <div class="container nav-inner">
       <a class="brand" href="index.html">
@@ -36,32 +59,17 @@
   </header>
 
   <main class="menu-page">
-    <div class="menu-fit">
-      <img src="assets/menu.jpeg" alt="Cold Carving Menu" />
-    </div>
+  <div class="menu-fit">
+    <img src="assets/menu.jpeg" alt="Cold Carving Menu" />
+  </div>
 
-    <div class="menu-actions">
-      <a class="btn" href="index.html">← Back to Home</a>
-      <a class="btn primary" href="assets/menu.jpeg" target="_blank" rel="noopener">Download the Menu</a>
-    </div>
-  </main>
+  <div class="menu-actions">
+    <a class="btn" href="index.html">← Back to Home</a>
+    <a class="btn primary" href="assets/menu.jpeg" target="_blank">Download the Menu</a>
+  </div>
+</main>
 
-  <script>
-    // mobile menu toggle (same behavior as your index)
-    const menuBtn = document.getElementById("menuBtn");
-    const navLinks = document.getElementById("navLinks");
-    if (menuBtn && navLinks) {
-      menuBtn.addEventListener("click", () => navLinks.classList.toggle("open"));
-    }
 
-    // set real navbar height so menu never hides behind it
-    const nav = document.querySelector(".nav");
-    if (nav) {
-      document.documentElement.style.setProperty("--real-nav-h", nav.offsetHeight + "px");
-      window.addEventListener("resize", () => {
-        document.documentElement.style.setProperty("--real-nav-h", nav.offsetHeight + "px");
-      });
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
