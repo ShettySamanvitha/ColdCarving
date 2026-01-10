@@ -468,7 +468,7 @@ img{ max-width:100%; display:block; }
 }
 /* ===== PRODUCT PAGE: reduce gap between image & info ===== */
 .product-split{
-  gap: 5px;   /* reduced gap (default was larger) */
+  gap: 1px;   /* reduced gap (default was larger) */
 }
 /* ===== HERO BACKGROUND IMAGE ===== */
 .hero-media{
@@ -656,6 +656,7 @@ img{ max-width:100%; display:block; }
 .menu-actions .btn{
   white-space: nowrap;
 }
+
 
 
 
