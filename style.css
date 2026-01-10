@@ -1,23 +1,17 @@
-/* =========================
-   Cold Carving - style.css
-   ========================= */
-
 :root{
   --bg:#0f0f12;
   --card:#17171c;
   --muted:#a8a8b3;
   --text:#f4f4f7;
-
   --accent:#f5b941;
   --accent2:#ff5a7a;
-
   --line: rgba(255,255,255,0.08);
   --shadow: 0 18px 40px rgba(0,0,0,0.45);
   --radius: 18px;
   --max: 1120px;
 
-  /* kept for safety, but NOT used for menu spacing */
-  --nav-h: 140px;
+  /* Menu page will use the REAL nav height measured by JS */
+  --real-nav-h: 140px; /* fallback */
 }
 
 *{ box-sizing:border-box; }
@@ -41,9 +35,7 @@ img{ max-width:100%; display:block; }
   margin: 0 auto;
 }
 
-/* =========================
-   NAV
-   ========================= */
+/* NAV */
 .nav{
   position: sticky;
   top:0;
@@ -69,6 +61,7 @@ img{ max-width:100%; display:block; }
   min-width: 260px;
 }
 
+/* BIGGER LOGO */
 .brand img{
   width: 140px;
   height: auto;
@@ -85,6 +78,7 @@ img{ max-width:100%; display:block; }
   line-height:1.1;
 }
 
+/* BIG TITLE */
 .brand .title strong{
   font-size: 46px;
   font-weight: 800;
@@ -94,10 +88,10 @@ img{ max-width:100%; display:block; }
 }
 
 .brand .title span{
+  color: var(--muted);
   font-size: 20px;
   opacity: 0.75;
   letter-spacing: 0.3px;
-  color: var(--muted);
 }
 
 .nav-links{
@@ -116,13 +110,11 @@ img{ max-width:100%; display:block; }
   transition: 160ms ease;
   font-size: 14px;
 }
-
 .nav-links a:hover{
   color: var(--text);
   border-color: var(--line);
   background: rgba(255,255,255,0.04);
 }
-
 .nav-links a.active{
   color: var(--bg);
   background: linear-gradient(90deg, var(--accent), var(--accent2));
@@ -139,9 +131,7 @@ img{ max-width:100%; display:block; }
   cursor:pointer;
 }
 
-/* =========================
-   HERO
-   ========================= */
+/* HERO */
 .hero{
   padding: 34px 0 22px;
 }
@@ -161,6 +151,7 @@ img{ max-width:100%; display:block; }
   box-shadow: var(--shadow);
 }
 
+/* HERO MEDIA WITH BACKGROUND */
 .hero-media{
   position: relative;
   min-height: 420px;
@@ -178,10 +169,9 @@ img{ max-width:100%; display:block; }
 }
 
 .hero-overlay{
-  position:absolute;
-  inset:0;
+  position: absolute;
+  inset: 0;
   z-index: 1;
-  background: linear-gradient(90deg, rgba(15,15,18,0.92), rgba(15,15,18,0.3) 60%, rgba(15,15,18,0.15));
 }
 
 .hero-content{
@@ -227,9 +217,7 @@ img{ max-width:100%; display:block; }
   flex-wrap: wrap;
 }
 
-/* =========================
-   BUTTONS
-   ========================= */
+/* BUTTONS */
 .btn{
   display:inline-flex;
   align-items:center;
@@ -245,23 +233,15 @@ img{ max-width:100%; display:block; }
   font-weight: 600;
   font-size: 14px;
 }
-
-.btn:hover{
-  transform: translateY(-1px);
-  background: rgba(255,255,255,0.06);
-}
-
+.btn:hover{ transform: translateY(-1px); background: rgba(255,255,255,0.06); }
 .btn.primary{
   border-color: transparent;
   background: linear-gradient(90deg, var(--accent), var(--accent2));
   color: #121216;
 }
-
 .btn.primary:hover{ filter: brightness(1.02); }
 
-/* =========================
-   SIDE PANEL
-   ========================= */
+/* SIDE PANEL */
 .side-panel{
   padding: 18px;
   display:flex;
@@ -285,7 +265,7 @@ img{ max-width:100%; display:block; }
   font-size: 13px;
 }
 
-/* Side panel image note */
+/* SIDE PANEL IMAGE */
 .image-note{
   padding: 0;
   overflow: hidden;
@@ -297,12 +277,8 @@ img{ max-width:100%; display:block; }
   border-radius: 12px;
 }
 
-/* =========================
-   SECTIONS
-   ========================= */
-.section{
-  padding: 28px 0;
-}
+/* SECTIONS */
+.section{ padding: 28px 0; }
 
 .section-head{
   display:flex;
@@ -325,12 +301,16 @@ img{ max-width:100%; display:block; }
   font-size: 14px;
 }
 
-/* =========================
-   GRIDS / CARDS
-   ========================= */
+/* GRIDS */
 .grid-3{
   display:grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.split{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
   gap: 14px;
 }
 
@@ -342,13 +322,14 @@ img{ max-width:100%; display:block; }
   box-shadow: var(--shadow);
 }
 
-/* product cards images (no crop) */
+/* Card media */
 .card .media{
   height: auto;
   background: #111;
   padding: 0;
   display: block;
 }
+
 .card .media img{
   width: 100%;
   height: auto;
@@ -357,8 +338,15 @@ img{ max-width:100%; display:block; }
 }
 
 .card .body{ padding: 14px; }
-.card .body h3{ margin: 0 0 6px; font-size: 18px; }
-.card .body p{ margin: 0 0 10px; color: var(--muted); font-size: 14px; }
+.card .body h3{
+  margin: 0 0 6px;
+  font-size: 18px;
+}
+.card .body p{
+  margin: 0 0 10px;
+  color: var(--muted);
+  font-size: 14px;
+}
 
 .card .meta{
   display:flex;
@@ -368,18 +356,17 @@ img{ max-width:100%; display:block; }
   flex-wrap: wrap;
 }
 
-.price{ font-weight: 800; letter-spacing:0.2px; }
-.small{ font-size: 13px; color: var(--muted); }
-
-.split{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
+.price{
+  font-weight: 800;
+  letter-spacing:0.2px;
 }
 
-/* =========================
-   LIST BOXES
-   ========================= */
+.small{
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* LIST CARDS */
 .list{ padding: 14px; }
 .list ul{
   margin: 8px 0 0;
@@ -389,9 +376,7 @@ img{ max-width:100%; display:block; }
 .list li{ margin: 8px 0; color: rgba(244,244,247,0.84); }
 .list li span{ color: var(--muted); }
 
-/* =========================
-   GALLERY
-   ========================= */
+/* GALLERY */
 .gallery{
   display:grid;
   grid-template-columns: repeat(4, 1fr);
@@ -411,16 +396,12 @@ img{ max-width:100%; display:block; }
   object-fit: cover;
 }
 
-/* =========================
-   QUOTES
-   ========================= */
+/* QUOTES */
 .quote{ padding: 16px; }
 .quote p{ margin:0; color: rgba(244,244,247,0.86); }
 .quote .who{ margin-top: 10px; color: var(--muted); font-size: 13px; }
 
-/* =========================
-   FOOTER
-   ========================= */
+/* FOOTER */
 .footer{
   border-top: 1px solid var(--line);
   padding: 20px 0;
@@ -444,9 +425,7 @@ img{ max-width:100%; display:block; }
   background: rgba(255,255,255,0.02);
 }
 
-/* =========================
-   TEAM GRID CARDS
-   ========================= */
+/* TEAM GRID */
 .team-card{ padding: 22px; }
 
 .team-lead{
@@ -500,58 +479,7 @@ img{ max-width:100%; display:block; }
   font-size: 13px;
 }
 
-/* =========================
-   MENU PAGE (menu.html)
-   - Uses real navbar height measured via JS
-   ========================= */
-.menu-view .menu-page{
-  min-height: 100vh;
-  padding-top: calc(var(--real-nav-h, 140px) + 16px);
-  padding-bottom: 16px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 14px;
-}
-
-.menu-view .menu-fit{
-  width: min(1100px, 92vw);
-  max-height: calc(100vh - var(--real-nav-h, 140px) - 32px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.menu-view .menu-fit img{
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-  border-radius: 16px;
-}
-
-/* fixed side buttons so they never overlap the menu */
-.menu-view .menu-actions{
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  background: rgba(0,0,0,0.65);
-  backdrop-filter: blur(10px);
-  padding: 12px;
-  border-radius: 18px;
-  border: 1px solid var(--line);
-  z-index: 999;
-}
-
-.menu-view .menu-actions .btn{ white-space: nowrap; }
-
-/* =========================
-   RESPONSIVE
-   ========================= */
+/* RESPONSIVE */
 @media (max-width: 980px){
   .hero-grid{ grid-template-columns: 1fr; }
   .grid-3{ grid-template-columns: 1fr; }
@@ -579,4 +507,60 @@ img{ max-width:100%; display:block; }
 @media (max-width: 520px){
   .hero-content h1{ font-size: 34px; }
   .gallery{ grid-template-columns: 1fr; }
+}
+
+/* =========================
+   MENU PAGE (FINAL FIX)
+   ========================= */
+
+body.menu-view{
+  overflow: hidden; /* full-fit view */
+}
+
+.menu-view .menu-page{
+  height: calc(100vh - var(--real-nav-h));
+  margin-top: var(--real-nav-h);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+}
+
+.menu-view .menu-fit{
+  width: min(1100px, 96vw);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-view .menu-fit img{
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.03);
+}
+
+/* Buttons on side, not overlapping menu */
+.menu-view .menu-actions{
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background: rgba(0,0,0,0.65);
+  backdrop-filter: blur(10px);
+  z-index: 999;
+}
+
+.menu-view .menu-actions .btn{
+  white-space: nowrap;
 }
