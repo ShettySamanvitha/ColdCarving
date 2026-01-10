@@ -345,7 +345,7 @@ img{ max-width:100%; display:block; }
 .gallery{
   display:grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
+  gap: 16px;
 }
 .gallery .g{
   border-radius: 16px;
@@ -356,7 +356,8 @@ img{ max-width:100%; display:block; }
 .gallery img{
   height: 160px;
   width:100%;
-  object-fit: cover;
+  object-fit: contain;   /* no crop */
+  display: block;
 }
 
 .quote{
@@ -538,6 +539,7 @@ img{ max-width:100%; display:block; }
   display: block;
   border-radius: 12px;
 }
+
 
 
 
