@@ -447,6 +447,17 @@ img{ max-width:100%; display:block; }
   object-fit: contain; /* no cropping */
   display: block;
 }
+/* ===== PRODUCT PAGE: IMAGE CARD WIDTH FIX ===== */
+.product-image-card{
+  width: fit-content;          /* box hugs image */
+  max-width: 100%;
+}
+
+.product-image-card .media{
+  padding: 0;
+}
+
+
 
 
 
