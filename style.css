@@ -278,20 +278,19 @@ img{ max-width:100%; display:block; }
   box-shadow: var(--shadow);
 }
 
+/* ===== PRODUCT PAGE FULL IMAGE FIX ===== */
 .card .media{
+  height: auto;
   background: #111;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 14px;
-  height: auto;          /* IMPORTANT */
+  padding: 0;
+  display: block;
 }
 
 .card .media img{
   width: 100%;
-  height: auto;          /* IMPORTANT */
-  max-height: none;      /* IMPORTANT */
-  object-fit: contain;   /* ensures full image shows */
+  height: auto;
+  object-fit: contain;
+  display: block;
 }
 
 .card .body{
@@ -432,6 +431,7 @@ img{ max-width:100%; display:block; }
   .hero-content h1{ font-size: 34px; }
   .gallery{ grid-template-columns: 1fr; }
 }
+
 
 
 
