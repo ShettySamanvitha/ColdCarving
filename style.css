@@ -478,7 +478,7 @@ img{ max-width:100%; display:block; }
     linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.8)),
     url("assets/logo.png");
 
-  background-size: 100% 100%;
+  background-size: 140%;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -535,6 +535,7 @@ img{ max-width:100%; display:block; }
   display: block;
   border-radius: 12px;
 }
+
 
 
 
