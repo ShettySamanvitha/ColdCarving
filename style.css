@@ -2,7 +2,7 @@
   --bg:#0f0f12;
   --card:#17171c;
   --muted:#a8a8b3;
-  --nav-h: 130px;
+  --nav-h: 200px;
   --text:#f4f4f7;
   --accent:#f5b941;
   --accent2:#ff5a7a;
@@ -654,6 +654,7 @@ img{ max-width:100%; display:block; }
 .menu-actions .btn{
   white-space: nowrap;
 }
+
 
 
 
