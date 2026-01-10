@@ -2,7 +2,7 @@
   --bg:#0f0f12;
   --card:#17171c;
   --muted:#a8a8b3;
-  --nav-h: 96px;
+  --nav-h: 140px;
   --text:#f4f4f7;
   --accent:#f5b941;
   --accent2:#ff5a7a;
@@ -432,6 +432,12 @@ img{ max-width:100%; display:block; }
   .nav-links.open{ display:flex; }
   .nav-inner{ align-items:flex-start; }
 }
+@media (max-width: 980px){
+  :root{
+    --nav-h: 96px;
+  }
+}
+
 @media (max-width: 520px){
   .hero-content h1{ font-size: 34px; }
   .gallery{ grid-template-columns: 1fr; }
@@ -656,6 +662,7 @@ img{ max-width:100%; display:block; }
 .menu-actions .btn{
   white-space: nowrap;
 }
+
 
 
 
