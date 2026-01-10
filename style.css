@@ -431,6 +431,20 @@ img{ max-width:100%; display:block; }
   .hero-content h1{ font-size: 34px; }
   .gallery{ grid-template-columns: 1fr; }
 }
+/* ===== PRODUCT PAGE: FULL IMAGE + BOX SAME SIZE ===== */
+.product-media{
+  height: auto !important;     /* ignores any fixed height */
+  padding: 0 !important;
+  background: transparent;
+}
+
+.product-img{
+  width: 100%;
+  height: auto;
+  object-fit: contain;         /* no cropping */
+  display: block;
+}
+
 
 
 
