@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Menu | Cold Carving</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .menu-page{
+      padding: 110px 0 50px; /* leaves space for navbar */
+    }
+    .menu-wrap{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 16px;
+      text-align: center;
+    }
+    .menu-img{
+      width: 100%;
+      height: auto;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.03);
+    }
+    .menu-actions{
+      margin: 16px 0 18px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- same NAV as index -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.png" alt="Cold Carving logo" />
+        <div class="title">
+          <strong>Cold Carving</strong>
+          <span>Carved Fresh. Served Cold.</span>
+        </div>
+      </a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="index.html#products">Products</a>
+        <a class="active" href="menu.html">Menu Card</a>
+        <a href="index.html#ingredients">Ingredients</a>
+        <a href="index.html#gallery">Gallery</a>
+        <a href="index.html#location">Location</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="menu-page">
+    <div class="menu-wrap">
+      <div class="menu-actions">
+        <a class="btn" href="index.html">← Back to Home</a>
+        <a class="btn primary" href="assets/menu.jpeg" target="_blank" rel="noopener">Open Full Image</a>
+      </div>
+
+      <img class="menu-img" src="assets/menu.jpeg" alt="Cold Carving Menu" />
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
