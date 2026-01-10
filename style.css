@@ -463,5 +463,6 @@ img{ max-width:100%; display:block; }
 }
 /* ===== PRODUCT PAGE: reduce gap between image & info ===== */
 .product-split{
-  gap: 16px;   /* reduced gap (default was larger) */
+  gap: 12px;   /* reduced gap (default was larger) */
 }
+
