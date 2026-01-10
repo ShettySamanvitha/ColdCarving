@@ -442,11 +442,12 @@ img{ max-width:100%; display:block; }
 
 .product-img{
   width: 85%;           /* smaller but still prominent */
-  max-width: 350px;     /* caps the size on big screens */
+  max-width: 250px;     /* caps the size on big screens */
   height: auto;
   object-fit: contain; /* no cropping */
   display: block;
 }
+
 
 
 
