@@ -441,12 +441,13 @@ img{ max-width:100%; display:block; }
 }
 
 .product-img{
-  width: 85%;          /* 🔥 THIS MAKES IMAGE SMALLER */
+  width: 75%;          /* 🔥 THIS MAKES IMAGE SMALLER */
   max-width: 520px;   /* 🔥 PREVENTS TOO LARGE IMAGE */
   height: auto;
   object-fit: contain;
   display: block;
 }
+
 
 
 
