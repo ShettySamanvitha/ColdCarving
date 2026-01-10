@@ -538,8 +538,10 @@ img{ max-width:100%; display:block; }
   display: block;
   border-radius: 12px;
 }
-
-
+/* Slight zoom-out only for gallery3 */
+.gallery img.zoom-out{
+  transform: scale(0.9);
+}
 
 
 
