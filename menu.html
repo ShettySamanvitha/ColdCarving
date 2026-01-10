@@ -4,11 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Menu | Cold Carving</title>
-  <link rel="stylesheet" href="style.css?v=10" />
+
+  <!-- cache-bust to force github pages to load latest css -->
+  <link rel="stylesheet" href="style.css?v=21" />
 </head>
 
 <body class="menu-view">
-
   <!-- NAV -->
   <header class="nav">
     <div class="container nav-inner">
@@ -34,7 +35,6 @@
     </div>
   </header>
 
-  <!-- MENU -->
   <main class="menu-page">
     <div class="menu-fit">
       <img src="assets/menu.jpeg" alt="Cold Carving Menu" />
@@ -46,19 +46,22 @@
     </div>
   </main>
 
-  <!-- Measure actual navbar height and store it in CSS var -->
   <script>
-    (function () {
-      const nav = document.querySelector(".nav");
-      const setNavH = () => {
-        if (!nav) return;
-        document.documentElement.style.setProperty("--real-nav-h", nav.offsetHeight + "px");
-      };
-      setNavH();
-      window.addEventListener("resize", setNavH);
-    })();
-  </script>
+    // mobile menu toggle (same behavior as your index)
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+    if (menuBtn && navLinks) {
+      menuBtn.addEventListener("click", () => navLinks.classList.toggle("open"));
+    }
 
-  <script src="script.js"></script>
+    // set real navbar height so menu never hides behind it
+    const nav = document.querySelector(".nav");
+    if (nav) {
+      document.documentElement.style.setProperty("--real-nav-h", nav.offsetHeight + "px");
+      window.addEventListener("resize", () => {
+        document.documentElement.style.setProperty("--real-nav-h", nav.offsetHeight + "px");
+      });
+    }
+  </script>
 </body>
 </html>
