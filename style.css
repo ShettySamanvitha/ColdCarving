@@ -515,6 +515,19 @@ img{ max-width:100%; display:block; }
 .brand{
   gap: 12px;
 }
+/* ===== SIDE PANEL IMAGE NOTE ===== */
+.image-note{
+  padding: 0;
+  overflow: hidden;
+}
+
+.image-note img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
 
 
 
