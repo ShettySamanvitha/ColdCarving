@@ -662,6 +662,19 @@ img{ max-width:100%; display:block; }
 .menu-actions .btn{
   white-space: nowrap;
 }
+/* ===== MENU PAGE: prevent nav overlapping menu image ===== */
+.menu-view .menu-page{
+  padding-top: calc(var(--nav-h) + 16px);
+  height: auto;          /* override the 100vh center behavior */
+  min-height: 100vh;
+  align-items: flex-start;
+}
+
+/* Make the menu image fit within visible screen BELOW the nav */
+.menu-view .menu-fit{
+  max-height: calc(100vh - var(--nav-h) - 24px);
+}
+
 
 
 
