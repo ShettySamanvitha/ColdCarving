@@ -431,19 +431,24 @@ img{ max-width:100%; display:block; }
   .hero-content h1{ font-size: 34px; }
   .gallery{ grid-template-columns: 1fr; }
 }
-/* ===== PRODUCT PAGE: FULL IMAGE + BOX SAME SIZE ===== */
+/* ===== PRODUCT PAGE IMAGE SIZE CONTROL ===== */
 .product-media{
-  height: auto !important;     /* ignores any fixed height */
+  height: auto !important;
   padding: 0 !important;
   background: transparent;
+  display: flex;
+  justify-content: center;
 }
 
 .product-img{
-  width: 100%;
+  width: 85%;          /* 🔥 THIS MAKES IMAGE SMALLER */
+  max-width: 520px;   /* 🔥 PREVENTS TOO LARGE IMAGE */
   height: auto;
-  object-fit: contain;         /* no cropping */
+  object-fit: contain;
   display: block;
 }
+
+
 
 
 
