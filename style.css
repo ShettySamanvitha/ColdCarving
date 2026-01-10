@@ -499,7 +499,7 @@ img{ max-width:100%; display:block; }
 }
 /* ===== BRANDING: BIGGER LOGO + TITLE ===== */
 .brand img{
-  width: 80px;          /* increase logo size */
+  width: 120px;          /* increase logo size */
   height: auto;
   object-fit: contain;
 }
@@ -535,6 +535,7 @@ img{ max-width:100%; display:block; }
   display: block;
   border-radius: 12px;
 }
+
 
 
 
