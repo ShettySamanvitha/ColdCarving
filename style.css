@@ -2,6 +2,7 @@
   --bg:#0f0f12;
   --card:#17171c;
   --muted:#a8a8b3;
+  --nav-h: 110px;
   --text:#f4f4f7;
   --accent:#f5b941;
   --accent2:#ff5a7a;
@@ -607,17 +608,19 @@ img{ max-width:100%; display:block; }
   }
 }
 /* ===== MENU FULL SCREEN FIT ===== */
+/* ===== MENU FULL SCREEN FIT (fixed for sticky navbar) ===== */
 .menu-page{
-  height: 100vh;
+  height: calc(100vh - var(--nav-h));
+  margin-top: var(--nav-h);       /* pushes content below navbar */
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: 80px; /* space for buttons */
+  padding-bottom: 90px;           /* space for fixed buttons */
 }
 
 .menu-fit{
   max-width: 100%;
-  max-height: calc(100vh - 110px); /* leaves space for buttons */
+  max-height: calc(100vh - var(--nav-h) - 110px); /* navbar + buttons space */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -651,6 +654,7 @@ img{ max-width:100%; display:block; }
 .menu-actions .btn{
   white-space: nowrap;
 }
+
 
 
 
