@@ -38,6 +38,7 @@ img{ max-width:100%; display:block; }
   backdrop-filter: blur(12px);
   background: rgba(15,15,18,0.65);
   border-bottom: 1px solid var(--line);
+  padding: 16px 0;
 }
 
 .nav-inner{
@@ -497,24 +498,30 @@ img{ max-width:100%; display:block; }
 }
 /* ===== BRANDING: BIGGER LOGO + TITLE ===== */
 .brand img{
-  width: 56px;          /* increase logo size */
-  height: 56px;
+  width: 60px;          /* increase logo size */
+  height: auto;
   object-fit: contain;
 }
 
 .brand .title strong{
-  font-size: 22px;      /* make "Cold Carving" big */
-  font-weight: 700;
-  letter-spacing: 0.5px;
+  font-size: 26px;        /* BIG title */
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  color: #fff;
+  line-height: 1.1;
 }
 
+
 .brand .title span{
-  font-size: 13px;      /* tagline smaller but visible */
-  opacity: 0.8;
+  font-size: 13px;
+  opacity: 0.75;
+  letter-spacing: 0.3px;
 }
+
 .brand{
-  gap: 12px;
+  gap: 14px;              /* space between logo & text */
 }
+
 /* ===== SIDE PANEL IMAGE NOTE ===== */
 .image-note{
   padding: 0;
@@ -527,6 +534,7 @@ img{ max-width:100%; display:block; }
   display: block;
   border-radius: 12px;
 }
+
 
 
 
