@@ -613,14 +613,14 @@ img{ max-width:100%; display:block; }
 
 .menu-view .menu-page{
   /* leave space for the sticky nav automatically */
-  padding-top: var(--nav-real-h, 140px);
+  padding-top: calc(var(--nav-real-h, 140px) + 4px);
   padding-bottom: 22px;
 
   /* center everything */
   min-height: 100vh;
-  display: grid;
-  place-items: center;
-  gap: 14px;
+  display: flex;
+justify-content: flex-start;
+align-items: center;
 }
 
 .menu-view .menu-box{
@@ -668,6 +668,7 @@ img{ max-width:100%; display:block; }
 .menu-view .menu-actions .btn{
   white-space: nowrap;
 }
+
 
 
 
