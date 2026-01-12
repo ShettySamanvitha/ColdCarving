@@ -613,7 +613,7 @@ img{ max-width:100%; display:block; }
 
 .menu-view .menu-page{
   /* leave space for the sticky nav automatically */
-  padding-top: calc(var(--nav-real-h, 140px) + 16px);
+  padding-top: calc(var(--nav-real-h, 140px) - 60px );
   padding-bottom: 22px;
 
   /* center everything */
@@ -668,6 +668,7 @@ img{ max-width:100%; display:block; }
 .menu-view .menu-actions .btn{
   white-space: nowrap;
 }
+
 
 
 
