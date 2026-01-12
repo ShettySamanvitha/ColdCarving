@@ -613,7 +613,7 @@ img{ max-width:100%; display:block; }
 
 .menu-view .menu-page{
   /* leave space for the sticky nav automatically */
-  padding-top: calc(var(--nav-real-h, 140px) - 60px );
+  padding-top: calc(var(--nav-real-h, 140px) + 16px );
   padding-bottom: 22px;
 
   /* center everything */
@@ -627,7 +627,7 @@ img{ max-width:100%; display:block; }
   width: min(92vw, 980px);
 
   /* this is the key: menu fits inside visible height */
-  height: calc(100vh - var(--nav-real-h, 140px) - 120px);
+  height: calc(100vh - var(--nav-real-h, 140px) - 50px);
 
   border-radius: 22px;
   border: 1px solid rgba(255,255,255,0.12);
@@ -668,6 +668,7 @@ img{ max-width:100%; display:block; }
 .menu-view .menu-actions .btn{
   white-space: nowrap;
 }
+
 
 
 
