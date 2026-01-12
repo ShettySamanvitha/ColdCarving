@@ -607,44 +607,57 @@ img{ max-width:100%; display:block; }
     grid-template-columns: 1fr;
   }
 }
-/* ===== MENU FULL SCREEN FIT ===== */
-/* ===== MENU FULL SCREEN FIT (fixed for sticky navbar) ===== */
-.menu-page{
-  height: calc(100vh - var(--nav-h));
-  margin-top: var(--nav-h);       /* pushes content below navbar */
+/* =========================
+   MENU PAGE (CENTER BOX FIT)
+   ========================= */
+
+.menu-view .menu-page{
+  /* leave space for the sticky nav automatically */
+  padding-top: calc(var(--nav-real-h, 140px) + 16px);
+  padding-bottom: 22px;
+
+  /* center everything */
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  gap: 14px;
+}
+
+.menu-view .menu-box{
+  width: min(92vw, 980px);
+
+  /* this is the key: menu fits inside visible height */
+  height: calc(100vh - var(--nav-real-h, 140px) - 120px);
+
+  border-radius: 22px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.03);
+  box-shadow: var(--shadow);
+
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: 90px;           /* space for fixed buttons */
+
+  padding: 14px;
+  overflow: hidden;
 }
 
-.menu-fit{
-  max-width: 100%;
-  max-height: calc(100vh - var(--nav-h) - 110px); /* navbar + buttons space */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.menu-fit img{
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
-  object-fit: contain; /* KEY LINE */
+.menu-view .menu-img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;  /* shows full menu inside the box */
   border-radius: 16px;
 }
 
-/* Fixed bottom buttons */
-/* ===== MENU ACTION BUTTONS (SIDE, NOT OVER IMAGE) ===== */
-.menu-actions{
+/* keep buttons at side, not covering menu */
+.menu-view .menu-actions{
   position: fixed;
-  bottom: 20px;
-  right: 20px;          /* move to side */
+  right: 18px;
+  bottom: 18px;
   display: flex;
-  flex-direction: column; /* stack buttons vertically */
+  flex-direction: column;
   gap: 10px;
-  background: rgba(0,0,0,0.65);
+  background: rgba(0,0,0,0.55);
   backdrop-filter: blur(10px);
   padding: 12px;
   border-radius: 18px;
@@ -652,8 +665,7 @@ img{ max-width:100%; display:block; }
   z-index: 999;
 }
 
-
-.menu-actions .btn{
+.menu-view .menu-actions .btn{
   white-space: nowrap;
 }
 
